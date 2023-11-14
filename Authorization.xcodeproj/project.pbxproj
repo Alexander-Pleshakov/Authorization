@@ -16,6 +16,7 @@
 		163CA2682B0419EA004401DF /* AuthorizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163CA2672B0419EA004401DF /* AuthorizationTests.swift */; };
 		163CA2722B0419EA004401DF /* AuthorizationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163CA2712B0419EA004401DF /* AuthorizationUITests.swift */; };
 		163CA2742B0419EA004401DF /* AuthorizationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163CA2732B0419EA004401DF /* AuthorizationUITestsLaunchTests.swift */; };
+		163CA2812B041D02004401DF /* UserStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163CA2802B041D02004401DF /* UserStructure.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		163CA26D2B0419EA004401DF /* AuthorizationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AuthorizationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		163CA2712B0419EA004401DF /* AuthorizationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationUITests.swift; sourceTree = "<group>"; };
 		163CA2732B0419EA004401DF /* AuthorizationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		163CA2802B041D02004401DF /* UserStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStructure.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				163CA2522B0419E7004401DF /* SceneDelegate.swift */,
 				163CA2542B0419E7004401DF /* ViewController.swift */,
 				163CA2562B0419E8004401DF /* Main.storyboard */,
+				163CA2802B041D02004401DF /* UserStructure.swift */,
 				163CA2592B0419EA004401DF /* Assets.xcassets */,
 				163CA25B2B0419EA004401DF /* LaunchScreen.storyboard */,
 				163CA25E2B0419EA004401DF /* Info.plist */,
@@ -260,6 +263,7 @@
 			files = (
 				163CA2552B0419E7004401DF /* ViewController.swift in Sources */,
 				163CA2512B0419E7004401DF /* AppDelegate.swift in Sources */,
+				163CA2812B041D02004401DF /* UserStructure.swift in Sources */,
 				163CA2532B0419E7004401DF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
