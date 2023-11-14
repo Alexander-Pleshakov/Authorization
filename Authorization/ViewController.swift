@@ -18,9 +18,45 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
-
-
+    
+    private func Authorization() -> Bool {
+        guard let userName = loginTextField.text,
+              let password = passwordTextField.text
+        else {
+            return false
+        }
+        
+        let user = UserDefaults.standard.object(forKey: userName) as! User
+        
+        if password == user.password {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    private func changePassword() {
+        
+    }
+    
+    private func registration() {
+        
+    }
+    
+    
+    @IBAction func buttonLogin(_ sender: Any) {
+        let isExist = Authorization()
+    }
+    
+    @IBAction func buttonNewPassword(_ sender: Any) {
+        changePassword()
+    }
+    
+    @IBAction func buttonRegistration(_ sender: Any) {
+        registration()
+    }
+    
 }
 
