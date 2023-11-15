@@ -18,7 +18,7 @@
 		163CA2742B0419EA004401DF /* AuthorizationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163CA2732B0419EA004401DF /* AuthorizationUITestsLaunchTests.swift */; };
 		163CA2812B041D02004401DF /* UserStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163CA2802B041D02004401DF /* UserStructure.swift */; };
 		163CA2832B049F6B004401DF /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163CA2822B049F6B004401DF /* RegistrationViewController.swift */; };
-		163CA2852B04A067004401DF /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163CA2842B04A067004401DF /* AuthorizationViewController.swift */; };
+		163CA2872B04AAC0004401DF /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163CA2862B04AAC0004401DF /* ChangePasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,7 @@
 		163CA2732B0419EA004401DF /* AuthorizationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		163CA2802B041D02004401DF /* UserStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStructure.swift; sourceTree = "<group>"; };
 		163CA2822B049F6B004401DF /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
-		163CA2842B04A067004401DF /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
+		163CA2862B04AAC0004401DF /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +109,7 @@
 				163CA2522B0419E7004401DF /* SceneDelegate.swift */,
 				163CA2542B0419E7004401DF /* ViewController.swift */,
 				163CA2562B0419E8004401DF /* Main.storyboard */,
-				163CA2842B04A067004401DF /* AuthorizationViewController.swift */,
+				163CA2862B04AAC0004401DF /* ChangePasswordViewController.swift */,
 				163CA2822B049F6B004401DF /* RegistrationViewController.swift */,
 				163CA2802B041D02004401DF /* UserStructure.swift */,
 				163CA2592B0419EA004401DF /* Assets.xcassets */,
@@ -267,10 +267,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				163CA2852B04A067004401DF /* AuthorizationViewController.swift in Sources */,
 				163CA2552B0419E7004401DF /* ViewController.swift in Sources */,
 				163CA2512B0419E7004401DF /* AppDelegate.swift in Sources */,
 				163CA2812B041D02004401DF /* UserStructure.swift in Sources */,
+				163CA2872B04AAC0004401DF /* ChangePasswordViewController.swift in Sources */,
 				163CA2532B0419E7004401DF /* SceneDelegate.swift in Sources */,
 				163CA2832B049F6B004401DF /* RegistrationViewController.swift in Sources */,
 			);

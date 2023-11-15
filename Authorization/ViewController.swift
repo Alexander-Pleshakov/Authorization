@@ -21,6 +21,14 @@ class ViewController: UIViewController {
         
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if touches.first != nil {
+            view.endEditing(true)
+        }
+        
+        super.touchesBegan(touches, with: event)
+    }
+    
     private func Authorization() -> Bool {
         guard let userName = loginTextField.text,
               let password = passwordTextField.text
@@ -38,6 +46,7 @@ class ViewController: UIViewController {
     }
     
     private func changePassword() {
+        view.endEditing(true)
         
     }
     
