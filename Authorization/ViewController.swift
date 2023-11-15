@@ -53,7 +53,9 @@ class ViewController: UIViewController {
         infoLabel.text = ""
         let isExist = Authorization()
         if isExist {
-            infoLabel.text = "Успешная авторизация"
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = storyboard.instantiateViewController(identifier: "StartViewController")
+            self.present(viewController, animated: true, completion: nil)
         } else {
             infoLabel.text = "Введен неверный логин или пароль"
         }
