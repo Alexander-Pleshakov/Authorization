@@ -46,7 +46,7 @@ class RegistrationViewController: UIViewController {
         else {
             return (false, "Заполните все поля")
         }
-        if userName.isEmpty, password.isEmpty, lastName.isEmpty, firstName.isEmpty, patronymic.isEmpty, birthDay.isEmpty, bornPlace.isEmpty, phone.isEmpty {
+        if userName.isEmpty || password.isEmpty || lastName.isEmpty || firstName.isEmpty || patronymic.isEmpty || birthDay.isEmpty || bornPlace.isEmpty || phone.isEmpty {
             return (false, "Заполните все поля")
         }
         else

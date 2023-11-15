@@ -8,11 +8,16 @@
 import UIKit
 
 class ChangePasswordViewController: UIViewController {
-
+    
+    @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var repeatPasswordTextField: UITextField!
+    @IBOutlet weak var newPasswordTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -23,15 +28,45 @@ class ChangePasswordViewController: UIViewController {
         super.touchesBegan(touches, with: event)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func changePassword() {
+        guard let login = loginTextField.text,
+              let oldPassword = passwordTextField.text,
+              let newPassword = newPasswordTextField.text,
+              let repeatedPassword = repeatPasswordTextField.text
+        else {
+            infoLabel.text = "Заполнены не все поля"
+            return
+        }
+        
+        if login.isEmpty || oldPassword.isEmpty ||
+           newPassword.isEmpty || repeatedPassword.isEmpty {
+            infoLabel.text = "Заполнены не все поля"
+            return
+        }
+        
+        if let user = users[login] {
+            var user = user
+            if user.password == oldPassword {
+                if newPassword == repeatedPassword {
+                    user.password = newPassword
+                    users[login] = user
+                    infoLabel.textColor = .green
+                    infoLabel.text = "Пароль успешно изменен"
+                } else {
+                    infoLabel.text = "Вы неверно повторили пароль"
+                }
+            } else {
+                infoLabel.text = "Текущий пароль неверен"
+            }
+        } else {
+            infoLabel.text = "Такого логина не существует"
+        }
     }
-    */
-
+    
+    
+    @IBAction func buttonChangePassword(_ sender: Any) {
+        changePassword()
+        
+        view.endEditing(true)
+    }
 }
