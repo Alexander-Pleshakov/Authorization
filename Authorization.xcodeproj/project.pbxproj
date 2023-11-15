@@ -107,16 +107,11 @@
 		163CA24F2B0419E7004401DF /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
+				163CA28A2B051921004401DF /* Presentation */,
+				163CA28C2B051AAF004401DF /* Models */,
+				163CA28B2B05197B004401DF /* Resourses */,
 				163CA2502B0419E7004401DF /* AppDelegate.swift */,
 				163CA2522B0419E7004401DF /* SceneDelegate.swift */,
-				163CA2542B0419E7004401DF /* ViewController.swift */,
-				163CA2562B0419E8004401DF /* Main.storyboard */,
-				163CA2882B051242004401DF /* StartViewController.swift */,
-				163CA2862B04AAC0004401DF /* ChangePasswordViewController.swift */,
-				163CA2822B049F6B004401DF /* RegistrationViewController.swift */,
-				163CA2802B041D02004401DF /* UserStructure.swift */,
-				163CA2592B0419EA004401DF /* Assets.xcassets */,
-				163CA25B2B0419EA004401DF /* LaunchScreen.storyboard */,
 				163CA25E2B0419EA004401DF /* Info.plist */,
 			);
 			path = Authorization;
@@ -137,6 +132,35 @@
 				163CA2732B0419EA004401DF /* AuthorizationUITestsLaunchTests.swift */,
 			);
 			path = AuthorizationUITests;
+			sourceTree = "<group>";
+		};
+		163CA28A2B051921004401DF /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				163CA2882B051242004401DF /* StartViewController.swift */,
+				163CA2862B04AAC0004401DF /* ChangePasswordViewController.swift */,
+				163CA2822B049F6B004401DF /* RegistrationViewController.swift */,
+				163CA2542B0419E7004401DF /* ViewController.swift */,
+				163CA2562B0419E8004401DF /* Main.storyboard */,
+				163CA25B2B0419EA004401DF /* LaunchScreen.storyboard */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		163CA28B2B05197B004401DF /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				163CA2592B0419EA004401DF /* Assets.xcassets */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		163CA28C2B051AAF004401DF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				163CA2802B041D02004401DF /* UserStructure.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
