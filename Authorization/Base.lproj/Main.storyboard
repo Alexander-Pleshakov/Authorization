@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -51,6 +50,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Забыли пароль?"/>
                                 <connections>
                                     <action selector="buttonNewPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yXp-ct-rce"/>
+                                    <segue destination="cJP-30-np4" kind="show" id="21u-Fg-90C"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWd-Yf-rhJ">
@@ -60,12 +60,14 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Регистрация"/>
                                 <connections>
                                     <action selector="buttonRegistration:" destination="BYZ-38-t0r" eventType="touchUpInside" id="csU-Kw-Rkf"/>
+                                    <segue destination="C4s-gq-K8K" kind="show" id="DRc-9o-dD2"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="bcr-eQ-WTJ"/>
                     <connections>
                         <outlet property="loginButton" destination="wme-t2-NUJ" id="4dy-VO-jkg"/>
                         <outlet property="loginTextField" destination="90d-P7-UgD" id="Qxj-4q-01I"/>
@@ -78,10 +80,53 @@
             </objects>
             <point key="canvasLocation" x="35.877862595419849" y="3.5211267605633805"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oj6-hQ-XEk">
+            <objects>
+                <navigationController id="i4e-jP-CIg" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6rT-vh-sf5">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Vjm-NH-RM8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZpW-42-u1E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="36" y="-730"/>
+        </scene>
+        <!--Registration View Controller-->
+        <scene sceneID="B2s-k4-d21">
+            <objects>
+                <viewController storyboardIdentifier="RegistrationViewController" id="C4s-gq-K8K" customClass="RegistrationViewController" customModule="Authorization" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lRb-e9-TYs">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="k1M-t1-xEj"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lcM-mb-M7s"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m7f-PN-eeC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="905" y="4"/>
+        </scene>
+        <!--Authorization View Controller-->
+        <scene sceneID="rr9-73-Eod">
+            <objects>
+                <viewController storyboardIdentifier="AuthorizationViewController" id="cJP-30-np4" customClass="AuthorizationViewController" customModule="Authorization" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cTM-bP-SSd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="lnM-1S-Ccf"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5D8-6C-uMV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D3X-K6-g4s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="905" y="739"/>
+        </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
