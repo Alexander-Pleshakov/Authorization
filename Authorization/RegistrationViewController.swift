@@ -33,7 +33,8 @@ class RegistrationViewController: UIViewController {
         super.touchesBegan(touches, with: event)
     }
     
-    private func registration() -> Bool {
+    private func registration() -> (Bool, String) {
+        view.endEditing(true)
         guard let userName = userNameTextField.text,
            let password = passwordTextField.text,
            let lastName = lastNameTextField.text,
@@ -43,12 +44,13 @@ class RegistrationViewController: UIViewController {
            let bornPlace = bornPlaceTextField.text,
            let phone = phoneTextField.text
         else {
-            return false
+            return (false, "Заполните все поля")
         }
         if userName.isEmpty, password.isEmpty, lastName.isEmpty, firstName.isEmpty, patronymic.isEmpty, birthDay.isEmpty, bornPlace.isEmpty, phone.isEmpty {
-            
-            return false
-        } else {
+            return (false, "Заполните все поля")
+        }
+        else
+        {
             let user = User(name: userName,
                             password: password,
                             firstName: firstName,
@@ -58,20 +60,24 @@ class RegistrationViewController: UIViewController {
                             city: bornPlace,
                             phone: phone)
                 
-            UserDefaults.standard.set(user, forKey: userName)
-            return true
+            if let _ = users[userName] {
+                return (false, "Пользователь с таким именем уже существует")
+            } else {
+                users[userName] = user
+                return (true, "Вы успешно зарегистрировались")
+            }
         }
     }
     
     @IBAction func buttonRegistration(_ sender: Any) {
         infoLabel.text = ""
-        let isRegistration = registration()
+        let (isRegistration, log) = registration()
         if isRegistration {
             infoLabel.textColor = .green
-            infoLabel.text = "Вы успешно зарегистрировались"
+            infoLabel.text = log
         } else {
             infoLabel.textColor = .red
-            infoLabel.text = "Вы пропустили поле"
+            infoLabel.text = log
         }
     }
     

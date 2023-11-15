@@ -7,8 +7,10 @@
 
 import Foundation
 
+public var users: [String: User] = ["sasha": User(name: "sasha", password: "1234", firstName: "", lastName: "", patronymic: "", birthDay: "", city: "", phone: "")]
 
 public struct User {
+    
     public let name: String
     
     public var password: String
@@ -20,3 +22,5 @@ public struct User {
     public var phone: String
     
 }
+
+

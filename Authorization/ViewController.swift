@@ -37,11 +37,9 @@ class ViewController: UIViewController {
             return false
         }
         
-        guard let object = UserDefaults.standard.object(forKey: userName) else {
+        guard let user = users[userName] else {
             return false
         }
-        
-        let user = object as! User
         
         if password == user.password {
             return true
@@ -59,6 +57,8 @@ class ViewController: UIViewController {
         } else {
             infoLabel.text = "Введен неверный логин или пароль"
         }
+        
+        view.endEditing(true)
     }
     
 }
