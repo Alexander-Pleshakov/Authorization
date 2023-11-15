@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        passwordTextField.isSecureTextEntry = true
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -50,8 +51,10 @@ class ViewController: UIViewController {
     
     
     @IBAction func buttonLogin(_ sender: Any) {
+        view.endEditing(true)
         infoLabel.text = ""
         let isExist = Authorization()
+        
         if isExist {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let viewController = storyboard.instantiateViewController(identifier: "StartViewController")
@@ -59,8 +62,6 @@ class ViewController: UIViewController {
         } else {
             infoLabel.text = "Введен неверный логин или пароль"
         }
-        
-        view.endEditing(true)
     }
     
 }

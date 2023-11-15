@@ -17,7 +17,10 @@ class ChangePasswordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        passwordTextField.isSecureTextEntry = true
+        newPasswordTextField.isSecureTextEntry = true
+        repeatPasswordTextField.isSecureTextEntry = true
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
