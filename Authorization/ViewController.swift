@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     
+    @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var registrationButton: UIButton!
     @IBOutlet weak var newPasswordButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
@@ -36,7 +37,11 @@ class ViewController: UIViewController {
             return false
         }
         
-        let user = UserDefaults.standard.object(forKey: userName) as! User
+        guard let object = UserDefaults.standard.object(forKey: userName) else {
+            return false
+        }
+        
+        let user = object as! User
         
         if password == user.password {
             return true
@@ -45,26 +50,15 @@ class ViewController: UIViewController {
         }
     }
     
-    private func changePassword() {
-        view.endEditing(true)
-        
-    }
-    
-    private func registration() {
-        
-    }
-    
     
     @IBAction func buttonLogin(_ sender: Any) {
+        infoLabel.text = ""
         let isExist = Authorization()
-    }
-    
-    @IBAction func buttonNewPassword(_ sender: Any) {
-        changePassword()
-    }
-    
-    @IBAction func buttonRegistration(_ sender: Any) {
-        registration()
+        if isExist {
+            infoLabel.text = "Успешная авторизация"
+        } else {
+            infoLabel.text = "Введен неверный логин или пароль"
+        }
     }
     
 }
